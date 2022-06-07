@@ -8,6 +8,23 @@
 import Combine
 
 class UserManager: ObservableObject {
-    @Published var isRegistered = false
-    var name = ""
+    private let storageManager = StorageManager.shared
+    
+    @Published var isRegistered: Bool
+    lazy var name = storageManager.getName().name
+    
+    init() {
+        self.isRegistered = storageManager.getName().registered
+    }
+    
+    func checkingName(name: String) -> Bool {
+        if name.count < 3 {
+            return true
+        } else {
+            storageManager.save(name)
+            isRegistered.toggle()
+            self.name = name
+            return false
+        }
+    }
 }

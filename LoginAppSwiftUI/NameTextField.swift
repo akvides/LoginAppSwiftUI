@@ -10,14 +10,19 @@ import SwiftUI
 struct NameTextField: View {
     @Binding var name: String
     @Binding var color: Color
+    @Binding var showAlert: Bool
+    @EnvironmentObject private var userManager: UserManager
+    
     var body: some View {
         HStack{
             TextField("Введи логин", text: $name)
                 .onChange(of: name, perform: { _ in
                     checkingButton()
                 })
-            
                 .textFieldStyle(.roundedBorder)
+                .onSubmit {
+                    showAlert = userManager.checkingName(name: name)
+                }
             Text("\(name.count)")
         }
     }
@@ -33,6 +38,6 @@ struct NameTextField: View {
 
 struct NameTextField_Previews: PreviewProvider {
     static var previews: some View {
-        NameTextField(name: .constant("name"), color: .constant(.gray))
+        NameTextField(name: .constant("name"), color: .constant(.gray), showAlert: .constant(false))
     }
 }

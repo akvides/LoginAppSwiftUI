@@ -16,6 +16,7 @@
 		74D29151284901280068CA3E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D29150284901280068CA3E /* StorageManager.swift */; };
 		74D29153284910310068CA3E /* OkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D29152284910310068CA3E /* OkButton.swift */; };
 		74D29155284910930068CA3E /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D29154284910930068CA3E /* NameTextField.swift */; };
+		74D29157284E25070068CA3E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D29156284E25060068CA3E /* StartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		74D29150284901280068CA3E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		74D29152284910310068CA3E /* OkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkButton.swift; sourceTree = "<group>"; };
 		74D29154284910930068CA3E /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		74D29156284E25060068CA3E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +63,14 @@
 		74D2913D284900F50068CA3E /* LoginAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				74D29150284901280068CA3E /* StorageManager.swift */,
+				74D2914E284901200068CA3E /* UserManager.swift */,
 				74D2913E284900F50068CA3E /* LoginAppSwiftUIApp.swift */,
+				74D29156284E25060068CA3E /* StartView.swift */,
 				74D29140284900F50068CA3E /* ContentView.swift */,
 				74D2914C284901120068CA3E /* RegisterView.swift */,
 				74D29154284910930068CA3E /* NameTextField.swift */,
 				74D29152284910310068CA3E /* OkButton.swift */,
-				74D2914E284901200068CA3E /* UserManager.swift */,
-				74D29150284901280068CA3E /* StorageManager.swift */,
 				74D29142284900F70068CA3E /* Assets.xcassets */,
 				74D29144284900F70068CA3E /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 				74D2914D284901120068CA3E /* RegisterView.swift in Sources */,
 				74D29141284900F50068CA3E /* ContentView.swift in Sources */,
 				74D29151284901280068CA3E /* StorageManager.swift in Sources */,
+				74D29157284E25070068CA3E /* StartView.swift in Sources */,
 				74D29155284910930068CA3E /* NameTextField.swift in Sources */,
 				74D2914F284901200068CA3E /* UserManager.swift in Sources */,
 				74D2913F284900F50068CA3E /* LoginAppSwiftUIApp.swift in Sources */,
@@ -295,6 +299,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,6 +329,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

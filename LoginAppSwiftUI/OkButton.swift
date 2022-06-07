@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct OkButton: View {
+    
+    @EnvironmentObject private var userManager: UserManager
     @Binding var color: Color
     @Binding var showAlert: Bool
+    @Binding var name: String
+    
+    private let storageManager = StorageManager.shared
     
     var body: some View {
         Button(action: tapButton) {
@@ -26,20 +31,16 @@ struct OkButton: View {
         )
         .alert("Мало символов", isPresented: $showAlert) {
             Text("")
-        }
+        }   
     }
     
     func tapButton() {
-        if color == .gray {
-            showAlert = true
-        } else {
-            showAlert = false
-        }
+        showAlert = userManager.checkingName(name: name)
     }
 }
 
 struct OkButton_Previews: PreviewProvider {
     static var previews: some View {
-        OkButton(color: .constant(.gray), showAlert: .constant(false))
+        OkButton(color: .constant(.gray), showAlert: .constant(false), name: .constant(""))
     }
 }
